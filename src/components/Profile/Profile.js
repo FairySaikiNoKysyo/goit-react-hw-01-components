@@ -1,8 +1,9 @@
+import { Description, Item, ProfileStyle, Stats } from "./ProfileStyled"
 
 export const Profile = ({username,tag,location,avatar,stats:{followers,views,likes}})=>{
 return (
-    <div className="profile">
-    <div className="description">
+    <ProfileStyle>
+    <Description>
       <img
         src={avatar}
         alt="User avatar"
@@ -11,22 +12,22 @@ return (
       <p className="name">{username}</p>
       <p className="tag">{tag}</p>
       <p className="location">{location}</p>
-    </div>
+   </Description>
   
-    <ul className="stats">
-      <li>
+  <Stats>
+     <Item>
         <span className="label">Followers</span>
         <span className="quantity">{followers}</span>
-      </li>
-      <li>
+        </Item>
+     <Item>
         <span className="label">Views</span>
         <span className="quantity">{views}</span>
-      </li>
-      <li>
+     </Item>
+     <Item>
         <span className="label">Likes</span>
         <span className="quantity">{likes}</span>
-      </li>
-    </ul>
-  </div>
+     </Item>
+      </Stats>
+    </ProfileStyle>
 )
 }

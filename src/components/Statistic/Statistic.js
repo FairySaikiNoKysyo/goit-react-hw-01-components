@@ -1,7 +1,9 @@
+import { SectionStat } from "./StatisticStyled";
+
 export const Statistic = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
+   <SectionStat>
+      {title && <h2 >{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(stat => {
@@ -13,6 +15,6 @@ export const Statistic = ({ title, stats }) => {
           );
         })}
       </ul>
-    </section>
+      </SectionStat>
   );
 };
